@@ -243,6 +243,100 @@ footer {
     transform: translateY(0);
 }
 
+/* --- SEÇÃO LISTA DE COMPRAS --- */
+#shopping-list {
+    text-align: center;
+}
+
+#list-form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap; /* Para telas menores */
+}
+
+#list-form input[type="text"] {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    width: 300px; /* Largura padrão */
+}
+
+#add-item-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--color-text);
+    color: var(--color-light);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+#add-item-btn:hover {
+    background-color: #555;
+}
+
+#current-list-container {
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+#current-list-container h3 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+#current-list ul {
+    list-style: none;
+}
+
+#current-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px dashed #e8318b6e;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    word-break: break-word; /* Quebra palavras longas */
+}
+
+/* Placeholder se a lista estiver vazia */
+#current-list:empty::after {
+    content: 'Sua lista está vazia.';
+    font-style: italic;
+    color: #777;
+}
+
+#current-list li .item-remove-btn {
+    background: none;
+    border: none;
+    color: #cc0000;
+    cursor: pointer;
+    font-size: 1.1rem; /* Tamanho do ícone */
+    margin-left: 1rem;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+#current-list li .item-remove-btn:hover {
+    color: #ff0000;
+}
+
+#send-list-btn {
+    cursor: pointer; /* Faz o mouse virar uma mãozinha */
+}
+
 /* --- RESPONSIVIDADE (PARA CELULARES) --- */
 @media (max-width: 900px) {
     .services-grid {
